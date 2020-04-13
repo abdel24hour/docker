@@ -1,0 +1,4 @@
+# This is socks5 docker container using port 1080 & authenticated by username & password
+
+docker run -d --name socks5 -p 1080:1080 -e \
+PROXY_USER=PUT_YOUR_USER_NAME -e PROXY_PASSWORD=PUT_YOUR_USER_PASSWORD serjs/go-socks5-proxy --restart-always
