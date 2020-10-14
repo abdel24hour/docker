@@ -6,6 +6,8 @@ yum install docker-ce -y
 yum-config-manager --enable docker-ce-edge
 systemctl start docker
 systemctl enable docker
+
+docker version
 ==================================================
 
 # Install LAST version of docker-compose
@@ -14,3 +16,4 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
+docker-compose version
