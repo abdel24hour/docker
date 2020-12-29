@@ -1,0 +1,22 @@
+server {
+        server_name xxxxx
+        # SSL Configuration
+        #
+        #listen [::]:443 ssl ipv6only=on; # managed by Certbot
+        listen 80; # managed by Certbot
+        access_log            /var/log/nginx/xx.access.log;
+        error_log             /var/log/nginx/xx.error.log;
+
+
+
+                location / {
+
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                #try_files $uri $uri/ =404;
+                #include /etc/nginx/proxy_params;
+                proxy_pass          http://domain:8080;
+                proxy_read_timeout  90s;
+                # Fix potential "It appears that your reverse proxy setup is broken" error.
+
+}
